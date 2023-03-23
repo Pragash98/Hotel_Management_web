@@ -1,60 +1,4 @@
-[![@coreui angular](https://img.shields.io/badge/@coreui%20-angular-lightgrey.svg?style=flat-square)](https://github.com/coreui/angular)
-[![npm-coreui-angular-next][npm-coreui-angular-badge-next]][npm-coreui-angular]
-[![NPM downloads][npm-coreui-angular-download]][npm-coreui-angular]  
-[![@coreui coreui](https://img.shields.io/badge/@coreui%20-coreui-lightgrey.svg?style=flat-square)](https://github.com/coreui/coreui)
-[![npm package][npm-coreui-badge]][npm-coreui]
-[![NPM downloads][npm-coreui-download]][npm-coreui]  
-![angular](https://img.shields.io/badge/angular-^14.2.0-lightgrey.svg?style=flat-square&logo=angular)
 
-[npm-coreui-angular]: https://www.npmjs.com/package/@coreui/angular
-[npm-coreui-angular-badge]: https://img.shields.io/npm/v/@coreui/angular.png?style=flat-square
-[npm-coreui-angular-badge-next]: https://img.shields.io/npm/v/@coreui/angular/next?style=flat-square&color=red
-[npm-coreui-angular-download]: https://img.shields.io/npm/dm/@coreui/angular.svg?style=flat-square
-[npm-coreui]: https://www.npmjs.com/package/@coreui/coreui
-[npm-coreui-badge]: https://img.shields.io/npm/v/@coreui/coreui.png?style=flat-square
-[npm-coreui-download]: https://img.shields.io/npm/dm/@coreui/coreui.svg?style=flat-square
-
-# CoreUI 4 Angular 14 Free Admin Template
-
-CoreUI is meant to be the UX game changer. Pure & transparent code is devoid of redundant components, so the app is light enough to offer ultimate user experience. This means mobile devices also, where the navigation is just as easy and intuitive as on a desktop or laptop. The CoreUI Layout API lets you customize your project for almost any device – be it Mobile, Web or WebApp – CoreUI covers them all!
-
-[CoreUI Angular Admin Template](https://coreui.io/angular)  
-[Demo](https://coreui.io/angular/demo/4.0/free/)
-
-## Table of Contents
-
-* [Versions](#versions)
-* [CoreUI Pro](#coreui-pro)
-* [Quick Start](#quick-start)
-* [Installation](#installation)
-* [Basic usage](#basic-usage)
-* [What's included](#whats-included)
-* [Documentation](#documentation)
-* [Versioning](#versioning)
-* [Creators](#creators)
-* [Community](#community)
-* [Copyright and License](#copyright-and-license)
-
-## Versions
-
-* [CoreUI Free Bootstrap Admin Template](https://github.com/coreui/coreui-free-bootstrap-admin-template)
-* [CoreUI Free Angular Admin Template](https://github.com/coreui/coreui-free-angular-admin-template)
-* [CoreUI Free React.js Admin Template](https://github.com/coreui/coreui-free-react-admin-template)
-* [CoreUI Free Vue.js Admin Template](https://github.com/coreui/coreui-free-vue-admin-template)
-
-## CoreUI Pro
-
-**Only customers with [Enterpise Membership Plan](https://coreui.io/pro/#buy) have access to private github CoreUI Pro repository.**
-
-* 💪  [CoreUI Pro Angular Admin Template](https://coreui.io/product/angular-dashboard-template/)
-* 💪  [CoreUI Pro Bootstrap Admin Template](https://coreui.io/product/bootstrap-dashboard-template/)
-* 💪  [CoreUI Pro React Admin Template](https://coreui.io/product/react-dashboard-template/)
-* 💪  [CoreUI Pro Vue Admin Template](https://coreui.io/product/vue-dashboard-template/)
-
-## Quick Start
-
-- [Download the latest release](https://github.com/coreui/coreui-free-angular-admin-template/)
-- Clone the repo: `git clone https://github.com/coreui/coreui-free-angular-admin-template.git`
 
 #### <i>Prerequisites</i>
 Before you begin, make sure your development environment includes `Node.js®` and an `npm` package manager.
@@ -99,7 +43,7 @@ $ npm run build
 Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. You'll see something like this:
 
 ```
-coreui-free-angular-admin-template
+angular-admin-template
 ├── src/                         # project root
 │   ├── app/                     # main app directory
 |   │   ├── containers/          # layout containers
