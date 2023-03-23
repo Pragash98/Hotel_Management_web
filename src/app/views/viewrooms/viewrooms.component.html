@@ -1,0 +1,28 @@
+<div class="card">
+    <p-dataView #d1 [value]="rooms" [paginator]="true" [rows]="9" filterBy="name" layout="grid">
+        <ng-template pTemplate="caption">
+            <!-- <p-dataViewLayoutOptions></p-dataViewLayoutOptions> -->
+
+        </ng-template>
+
+        <ng-template let-room pTemplate="gridItem">
+            <div class="col-12 md:col-4">
+                <div class="product-grid-item card">
+                   
+                    <div class="product-grid-item-content">
+                        <img src={{room.roomImage}} [alt]="room.roomImage"/>
+                        <div class="product-name">{{room.hotel.hotel_name}}</div>
+                        <div class="product-description">{{room.hotel.city}}</div>
+                        <p-rating [ngModel]="room.rating" [readonly]="true" [cancel]="false"></p-rating>
+                    </div>
+                    <div class="product-grid-item-bottom">
+                        <span class="product-price">₹{{room.price}}</span>
+                        <span >No of guests:{{room.max_guests}}</span>
+                                           
+                    </div>
+                    <button pButton type="button" label="Book Hotel" (click)="bookhotel(room._id)"></button>
+                </div>
+            </div>
+        </ng-template>
+    </p-dataView>
+</div>

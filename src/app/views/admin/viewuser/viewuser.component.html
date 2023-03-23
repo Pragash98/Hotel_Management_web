@@ -1,0 +1,73 @@
+<c-container>
+  <c-row class="justify-content-center">
+ 
+      <c-card class="mx-19">
+        <c-card-body class="p-9">
+          <h3><b>User Details</b></h3>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">User Name</th>
+                <th scope="col">City</th>
+                <th scope="col">Email</th>
+                <th scope="col">View</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let detail of users">
+                <td>
+                  {{detail.user_name}}
+                </td>
+                <td>
+                  {{detail.address}}
+                </td>
+                <td>
+                  {{detail.email}}
+                </td>
+                <td>
+                  <!-- <button mat-raised-button color="primary"(click)="viewProduct(detail._id)">View</button> -->
+                  <button [active]="true"  (click)="view(detail._id)" cButton color="info">View</button>
+<!-- <button (click)="showtoastersuccess()">Success</button> -->
+                </td>
+                <td>
+                  <button [active]="true" (click)="edituser(detail._id)"cButton color="warning">Edit</button>
+                </td>
+                <td>
+                  <!-- <button mat-raised-button color="warn"(click)="deleteProduct(detail._id)">Delete</button> -->
+                  <button [active]="true" (click)="deleteuser(detail._id)"cButton color="danger">Delete</button>
+                </td>
+
+                <!-- <button type="button" class="success" [routerLink]="['/editproduct', detail._id]" -->
+
+              </tr>
+            </tbody>
+          </table>
+        </c-card-body>
+      </c-card>
+  
+  </c-row>
+</c-container>
+
+<!-- 
+<c-modal alignment="center" [visible]="visible" >
+  <c-modal-header>
+    <h5 cModalTitle>User Details</h5>
+    <button (click)="usertoggle()" cButtonClose></button>
+  </c-modal-header>
+  <c-modal-body>
+    <b>UserName:</b>{{userinfo.user_name}}<br>
+    <b>City:</b>{{userinfo.address}}<br>
+    <b>Date of Birth:</b>{{userinfo.dob|date}}<br>
+    <b>Email:</b>{{userinfo.email}}<br>
+    <b>Mobile Number:</b>{{userinfo.mobile_number}}<br>
+  </c-modal-body>
+  <c-modal-footer>
+    <button (click)="usertoggle()" cButton color="secondary">
+      Close
+    </button>
+  </c-modal-footer>
+</c-modal>
+
+ -->

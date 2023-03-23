@@ -1,0 +1,80 @@
+<div class="container py-1 h-50 justify-content-center">
+  <div class="row d-flex justify-content-center align-items-center h-50">
+    <div class="col col-lg-6 mb-4 mb-lg-0 ">
+      <div *ngFor="let items of usersbooking" class="card mb-3" style="border-radius: .5rem;">
+        <div class="row g-0">
+          <!-- <div class="col-md-4 gradient-custom text-center text-white"
+              style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+              <h5>{{usersbooking.user_id.user_name}} </h5>
+        
+              <i class="far fa-edit mb-5"></i>
+            </div> -->
+          <div class="col-md-8">
+            <div class="card-body p-4">
+              <h6>USER NAME </h6>
+
+              <p class="text-muted">{{items.user_id.user_name}}</p>
+
+              <hr class="mt-0 mb-4">
+              <div class="row pt-1">
+                <div class="col-6 mb-3">
+                  <h6>Email</h6>
+                  <p class="text-muted">{{items.user_id.email}}</p>
+                </div>
+                <div class="col-6 mb-3">
+                  <h6>Phone</h6>
+                  <p class="text-muted">{{items.user_id.mobile_number}}</p>
+                </div>
+
+              </div>
+              <h6>Booking details</h6>
+              <hr class="mt-0 mb-4">
+              <div class="row pt-1">
+                <div class="col-6 mb-3">
+                  <h6>Price </h6>
+                  <p class="text-muted">{{items.total_price}}</p>
+                </div>
+                <div class="col-6 mb-3">
+                  <h6>Date of Booking </h6>
+                  <p class="text-muted">{{items.dateofbooking | date }}</p>
+                </div>
+                <div class="bg-white p-2 px-3 border-bottom">
+                  <div class="row">
+                    <div class="col-md-2000">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="check-in">
+                          <span>Check-in</span>
+                          <div class="d-flex flex-row align-items-center">
+                            <h1 class="date-o">{{items.from_date | date:"d"}}</h1>
+                            <div class="d-flex flex-column ml-2 date">
+                              <span>{{items.from_date | date:"MMM,y"}}</span>
+                              <span>{{items.from_date | date:"EEE"}}</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-column align-items-center">
+                          <i class="fa fa-moon-o"></i>
+                          <small>to</small>
+                        </div>
+                        <div class="check-out">
+                          <span>Check-out</span>
+                          <div class="d-flex flex-row align-items-center">
+                            <h1 class="date-o">{{items.to_date | date:"d"}}</h1>
+                            <div class="d-flex flex-column ml-2 date">
+                              <span>{{items.to_date | date:"MMM,y"}}</span>
+                              <span>{{items.to_date | date:"EEE"}}</span>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

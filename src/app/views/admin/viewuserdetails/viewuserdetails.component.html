@@ -1,0 +1,39 @@
+<div class="bg-light min-vh-50 d-flex flex-row align-items-center">
+    <c-container>
+      <c-row class="justify-content-center">
+        <c-col lg="7" md="" xl="6">
+          <c-card class="mx-4 mt-5">
+            <c-card-body class="p-4 mb-3" >
+                <h1>View User Details</h1>
+                <p class="text-medium-emphasis"></p>
+
+                <div class="mb-3">
+                    <label for="price" class="form-label"> USERNAME </label>
+                    <input [disabled]="true"  type="text" [(ngModel)] = "user_name" [ngModelOptions]="{standalone: true}"  class="form-control">
+                </div>
+                <div class="mb-3">
+                  <label for="price" class="form-label"> CITY </label>
+                  <input [disabled]="true"  type="text" [(ngModel)] = "city" [ngModelOptions]="{standalone: true}"  class="form-control">
+              </div>
+              <div class="mb-3">
+                <label for="price" class="form-label"> DATE OF BIRTH </label>
+                <input [disabled]="true"  type="text" [(ngModel)] = "dob" [ngModelOptions]="{standalone: true}"  class="form-control">
+            </div>
+            <div class="mb-3">
+              <label for="price" class="form-label"> MOBILE NUMBER </label>
+              <input [disabled]="true"  type="text" [(ngModel)] = "mobno" [ngModelOptions]="{standalone: true}"  class="form-control">
+          </div>
+          <div class="mb-3">
+            <label for="price" class="form-label"> EMAIL </label>
+            <input [disabled]="true"  type="text" [(ngModel)] = "email" [ngModelOptions]="{standalone: true}"  class="form-control">
+        </div>
+        <div class="d-grid mt-3">
+          <button [active]="true" cButton color="info" routerLink="/admin/viewuser">back!</button>
+          </div>
+            </c-card-body>
+          </c-card>
+        </c-col>
+      </c-row>
+    </c-container>
+  </div>
+

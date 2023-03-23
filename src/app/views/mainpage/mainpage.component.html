@@ -1,0 +1,45 @@
+<div class="bg-light min-vh-100 d-flex flex-row align-items-center">
+  <c-container>
+    <c-row class="justify-content-center">
+      <c-col md="8">
+        <c-card-group>
+          <c-card class="p-4">
+            <c-card-body>
+              <form>
+                <c-card-body class="text-center">
+                  <h2>User Login</h2>
+                   <div class="col-md-12 text-center">
+                    <button cButton class="mt-2" color="primary" routerLink="/login">Click here for User Login</button>
+                  </div>
+                </c-card-body>
+
+              </form>
+            </c-card-body>
+          </c-card>
+          <c-card [ngStyle]="{'width.%': 44}" class="text-white bg-success py-5">
+            <c-card-body class="text-center">
+              <div>
+                <h2>Admin Login</h2>
+                <button [active]="true" cButton class="mt-3" color="light" routerLink="/adminlogin">
+                  Click here for admin login!
+                </button>
+              </div>
+            </c-card-body>
+          </c-card>
+
+          <c-card class="p-5">
+            <c-card-body class="text-center">
+              <div>
+                <h2>Staff Login</h2>
+                <button [active]="true" cButton class="mt-3" color="primary" routerLink="/stafflogin">
+                  Click here for Staff login!
+                </button>
+              </div>
+            </c-card-body>
+          </c-card>
+
+        </c-card-group>
+      </c-col>
+    </c-row>
+  </c-container>
+</div>

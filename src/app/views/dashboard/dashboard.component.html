@@ -1,0 +1,16 @@
+<div class="card">
+  <div class="container  p-5 border">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col-sm" *ngFor="let item of hotels">
+        <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+          <div class="card-header">Location:{{item.city}}</div>
+          <div class="card-body">
+            <h5 class="card-title">Hotel Name:{{item.hotel_name}}</h5>
+            <p class="card-text">Rating:{{item.rating}}</p>
+            <button cButton color="info" cButton class="shadow" (click)="bookhotel()">Create Room</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,78 @@
+<!--<c-header class="mb-4 d-print-none" position="sticky">-->
+<ng-container>
+  <c-container [fluid]="true">
+    <button toggle="visible" cHeaderToggler [cSidebarToggle]="sidebarId" class="ps-1">
+      <svg cIcon name="cilMenu" size="lg"></svg>
+    </button>
+    <c-header-nav class="d-none d-lg-flex me-auto">
+      <c-nav-item>
+        <a cNavLink routerLink="/dashboard" routerLinkActive="active">
+          Dashboard
+        </a>
+      </c-nav-item>
+
+      <!-- <c-nav-item>
+    <a cNavLink routerLink="/users" routerLinkActive="active">Users</a>
+    </c-nav-item>
+    <c-nav-item>
+    <a cNavLink routerLink="/settings" routerLinkActive="active">
+    Settings
+    </a>
+    </c-nav-item> -->
+    </c-header-nav>
+
+    <c-header-nav class="d-none d-lg-flex" *ngIf="val">
+      <a cNavLink routerLink="login" routerLinkActive="active">
+        User Login
+      </a>
+    </c-header-nav>
+
+    <c-header-nav class="d-none d-lg-flex" *ngIf="val">
+      <a cNavLink routerLink="adminlogin" routerLinkActive="active">
+        Admin Login
+      </a>
+    </c-header-nav>
+
+    <c-header-nav class="d-none d-lg-flex" *ngIf="val">
+      <a cNavLink routerLink="register" routerLinkActive="active">
+        User register
+      </a>
+    </c-header-nav>
+
+    <c-header-nav class="ms-3">
+      <ng-container *ngTemplateOutlet="userDropdown"></ng-container>
+    </c-header-nav>
+
+  </c-container>
+  <c-header-divider></c-header-divider>
+  <c-container [fluid]="true">
+    <c-breadcrumb-router class="ms-2"></c-breadcrumb-router>
+  </c-container>
+</ng-container>
+<!--</c-header>-->
+
+<ng-template #userDropdown>
+  <c-dropdown alignment="end" variant="nav-item" *ngIf="showlogout">
+    <button cButton color="" [caret]="false" cDropdownToggle class="py-0">
+      <c-avatar cTextColor="primary" shape="rounded-1" size="md" src="./assets/img/avatars/profile.jpg"
+        status="success">
+      </c-avatar>
+    
+      <!-- <span *ngIf="currentUserRole === 'user'">
+        {{userdetail.user_name | titlecase}}
+      </span> -->
+      <!-- <span *ngIf="currentUserRole === 'staff'">
+    {{staff.staff_name}}
+    </span> -->
+    </button>
+    <ul cDropdownMenu class="pt-0 pr-5 w-auto">
+      
+      <!-- <a  class="dropdown-item" href="javascript:void(0)" [routerLink]="['/profile']">
+        <i class="ti-user m-r-5 m-l-5"></i> My Profile</a>
+      <div class="dropdown-divider"></div> -->
+      <a class="dropdown-item pointer" (click)="logout()">
+        <i class="fa fa-power-off m-r-5 m-l-5"></i> Logout</a>
+   
+    </ul>
+  </c-dropdown>
+</ng-template>

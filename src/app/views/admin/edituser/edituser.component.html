@@ -1,0 +1,46 @@
+<div class="bg-light min-vh-50 d-flex flex-row align-items-center">
+    <c-container>
+        <c-row class="justify-content-center">
+            <c-col lg="7" md="" xl="6">
+                <c-card class="mx-4 mt-5">
+                    <c-card-body class="p-4 mb-3">
+                        <h1>Update user details</h1>
+                        <p class="text-medium-emphasis"></p>
+                        <form [formGroup]="form">
+                        <div class="mb-3">
+                            <label class="form-label"> USERNAME </label>
+                            <input type="text" [(ngModel)]="user_name"  formControlName ="user_name" class="form-control" >
+                        </div>
+                        <div class="mb-3">
+                            <label  class="form-label"> CITY </label>
+                            <input type="text" [(ngModel)]="city"  formControlName="address" 
+                                class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label  class="form-label"> DATE OF BIRTH </label>
+                            <input type="text" [(ngModel)]="dob"  formControlName="dob"
+                                class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label  class="form-label"> MOBILE NUMBER </label>
+                            <input type="text" [(ngModel)]="mobno" formControlName="mobile_number"
+                                class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label  class="form-label"> EMAIL </label>
+                            <input type="text" [(ngModel)]="email"  formControlName="email"
+                                class="form-control">
+                        </div>
+                        <div class="d-grid gap-2 d-md-flex justify-content-center">
+                        <button type="button" class="btn btn-success" (click)="update()">Update</button>
+                    </div>
+                    <div class="d-grid mt-2 gap-2 d-md-flex justify-content-center">
+                        <button type="button" class="btn btn-info" routerLink="/admin/viewuser">Back!</button>
+                        </div>
+                    </form>
+                    </c-card-body>
+                </c-card>
+            </c-col>
+        </c-row>
+    </c-container>
+</div>

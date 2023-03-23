@@ -1,0 +1,40 @@
+<div class="bg-light min-vh-50 d-flex flex-row align-items-center">
+  <c-container>
+    <c-row class="justify-content-center">
+      <c-col lg="7" md="" xl="6">
+        <c-card class="mx-4 mt-5">
+          <c-card-body class="p-4 mb-3">
+            <form [formGroup]="form">
+              <h1>Create Room</h1>
+              <p class="text-medium-emphasis">Create Rooms</p>
+              <div class="mb-3">
+                <label for="Hotel" class="form-label"> Hotel </label>
+                <input [disabled]="true" type="text" [(ngModel)]="hotelname" [ngModelOptions]="{standalone: true}"
+                  class="form-control">
+              </div>
+              <div class="mb-3">
+                <input type="hidden" [(ngModel)]="hotelid" formControlName="hotel" class="form-control">
+              </div>
+              <div class="mb-3">
+                <label for="guest" class="form-label">No of guest</label>
+                <input type="number" formControlName="max_guests" placeholder="enter the number of guest"
+                  class="form-control" id="guest">
+              </div>
+              <div class="mb-3">
+                <label for="price" class="form-label">Price</label>
+                <input type="number" formControlName="price" placeholder="enter price" class="form-control" id="guest">
+              </div>
+              <div class="mb-3">
+                <label for="image" class="form-label">Room Image </label>
+                <input type="file" formControlName="roomImage" class="form-control" id="image" (change)="onFileChange($event)">
+              </div>
+              <div class="d-grid gap-2 col-6 mx-auto">
+                <button cButton color="success" (click)="booking()">Create room</button>
+              </div>
+            </form>
+          </c-card-body>
+        </c-card>
+      </c-col>
+    </c-row>
+  </c-container>
+</div>

@@ -1,0 +1,89 @@
+<div class="bg-light min-vh-50 d-flex flex-row align-items-center">
+    <c-container>
+      <c-row class="justify-content-center">
+        <c-col lg="7" md="" xl="6">
+          <c-card class="mx-4 mt-5">
+            <c-card-body class="p-4 mb-3" >
+              <form [formGroup]="form">
+                <h1>Book Hotel</h1>
+                <p class="text-medium-emphasis">Create your account</p>
+
+                <div class="mb-3">
+                    <label for="price" class="form-label"> Price </label>
+                    <input [disabled]="true"  type="text" [(ngModel)] = "price" [ngModelOptions]="{standalone: true}"  class="form-control">
+                </div>
+                
+                <div class="mb-3">
+                    <label for="persons" class="form-label"> No of persons </label>
+                    <input [disabled]="true"  type="text" [(ngModel)] = "guest" [ngModelOptions]="{standalone: true}"  class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label for="fromdate" class="form-label"> from date</label>
+                    <input type="date" formControlName="from_date" placeholder="YYYY-MM-DD"
+                        class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <input type="hidden" [(ngModel)] = "id" formControlName="room_id" class="form-control">
+                </div>
+                
+                <div class="mb-3">
+                    <label for="todate" class="form-label">To date</label>
+                    <input type="date" formControlName="to_date" placeholder="YYYY-MM-DD" class="form-control"
+                        id="exampleInputPassword1">
+                </div>  
+                
+                <div class="d-grid">
+                  <button cButton color="success" (click)="booking()">Book Hotel</button>
+                </div>
+                <div style="text-align:center;">
+                {{successMessage}}</div>
+              
+              </form>
+            </c-card-body>
+          </c-card>
+        </c-col>
+      </c-row>
+    </c-container>
+  </div>
+
+
+<!-- <div class="container py-1 h-50">
+    <div class="row d-flex justify-content-center align-items-center h-50">
+        <div class="col col-lg-6 mb-4 mb-lg-0">
+            <div class="card mb-3" style="border-radius: .5rem;">
+                <div class="row g-0">
+                   
+                    <form [formGroup]="form">
+                        <div class="mb-3">
+                            <label for="price" class="form-label"> Price </label>
+                            <input [disabled]="true"  type="text" [(ngModel)] = "price" [ngModelOptions]="{standalone: true}"  class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="persons" class="form-label"> No of persons </label>
+                            <input [disabled]="true"  type="text" [(ngModel)] = "guest" [ngModelOptions]="{standalone: true}"  class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="fromdate" class="form-label"> from date</label>
+                            <input type="text" formControlName="from_date" placeholder="YYYY-MM-DD"
+                                class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <input type="hidden" [(ngModel)] = "id" formControlName="room_id" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="todate" class="form-label">To date</label>
+                            <input type="text" formControlName="to_date" placeholder="YYYY-MM-DD" class="form-control"
+                                id="exampleInputPassword1">
+                        </div>
+                        <button cButton class="px-4" color="primary"  (click)="booking()">Login</button>
+                        <button type="submit" class="btn btn-primary" (click)="booking()">Submit</button>
+                        <div style="text-align:center;">
+                            {{successMessage}}</div>
+                         </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->

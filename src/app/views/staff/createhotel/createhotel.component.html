@@ -1,0 +1,39 @@
+<div class="bg-light min-vh-50 d-flex flex-row align-items-center">
+    <c-container>
+        <c-row class="justify-content-center">
+            <c-col lg="7" md="9" xl="6">
+                <c-card class="mx-4">
+                    <c-card-body class="p-4">
+                        <form [formGroup]="regform">
+                            <h1>CREATE HOTEL</h1>
+                            <p class="text-medium-emphasis">Enter the details to CREATE HOTEL </p>
+                            <div class="mb-3">
+                                <label for="hotelname" class="form-label"> Hotel Name</label>
+                                <input type="text" formControlName="staff_name" placeholder="Hotel Name"
+                                    class="form-control" />
+                                <!-- <span *ngIf="isValid('staff_name')">Please enter hotel name</span> -->
+                            </div>
+                            <div class="mb-3">
+                                <label for="city" class="form-label"> city</label>
+                                <input type="text" formControlName="city" placeholder="city " class="form-control">
+                                <!-- <span *ngIf="isValid('hotel_name')">Please enter hotel name</span> -->
+                            </div>
+                            <div class="mb-3">
+                                <label for="locataion" class="form-label"> locataion</label>
+                                <input type="text" formControlName="locataion" placeholder="Enter your location "
+                                    class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="rating" class="form-label"> rating</label>
+                                <input type="number" formControlName="rating" placeholder="rating" class="form-control">
+                            </div>
+                            <div class="d-grid">
+                                <button cButton color="success" (click)="createhotel()">Create Hotel</button>
+                            </div>
+                        </form>
+                    </c-card-body>
+                </c-card>
+            </c-col>
+        </c-row>
+    </c-container>
+</div>

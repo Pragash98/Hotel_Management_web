@@ -1,0 +1,116 @@
+<c-container>
+    <c-row class="justify-content-center">
+        <c-card class="mx-19">
+            <c-card-body class="p-9">
+                <h3><b>Hotel Details</b></h3>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Hotel Name</th>
+                            <th scope="col">City</th>
+                            <th scope="col">Rating</th>
+                            <th scope="col">View</th>
+                            <th scope="col">Update</th>
+                            <th scope="col">Delete</th>
+                            <th scope="col">Create room</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let detail of hotels">
+                            <td>
+                                {{detail.hotel_name}}
+                            </td>
+                            <td>
+                                {{detail.city}}
+                            </td>
+                            <td>
+                                {{detail.rating}}
+                            </td>
+                            <td>
+                                <button [active]="true" cButton color="success" (click)="viewhotel(detail._id)"
+                                    data-modal="modal-window-one"><svg cIcon name="cil-user" size="xl"></svg></button>
+                            </td>
+
+                            <td>
+                                <button [active]="true" cButton color="warning" (click)="update_hotel(detail._id)"
+                                    data-modal="modal-window-two"><svg cIcon name="cil-user-follow"
+                                        size="xl"></svg></button>
+                            </td>
+                            <td>
+                                <button [active]="true" cButton color="danger" (click)="deletehotel(detail._id)"><svg
+                                        cIcon name="cil-trash" size="xl"></svg></button>
+                            </td>
+                            <td>
+                                <button [active]="true" cButton color="info" (click)="createroom(detail._id)">Create
+                                    room</button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </c-card-body>
+        </c-card>
+    </c-row>
+
+</c-container>
+
+
+<c-modal id="modal-window-one" [visible]="visible" (visibleChange)="handleLiveDemoChange($event)" *ngIf="hotelid">
+    <c-modal-header>
+        <h5 cModalTitle>Hotel name : {{hotelid.hotel_name}}</h5>
+        <button (click)="back()" cButtonClose></button>
+    </c-modal-header>
+    <c-modal-body> City : {{hotelid.city}} <br>
+        Location : {{hotelid.location}}<br>
+        Rating : {{hotelid.rating}}
+
+    </c-modal-body>
+    <c-modal-footer>
+        <button (click)="back()" cButton color="secondary">
+            Close
+        </button>
+    </c-modal-footer>
+</c-modal>
+
+
+<c-modal id="modal-window-two" [visible]="visible" (visibleChange)="handleLiveDemoChange($event)" *ngIf="hoteludetails">
+    <c-modal-header>
+        <h5 cModalTitle>UPDATE HOTEL</h5>
+        <button (click)="back()" cButtonClose></button>
+    </c-modal-header>
+    <c-modal-body>
+        <form [formGroup]="form">
+            <div class="mb-3">
+                <label class="form-label"> Hotel Name </label>
+                <input type="text" [(ngModel)]="hotel_name" formControlName="hotel_name" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label class="form-label"> City </label>
+                <input type="text" [(ngModel)]="city" formControlName="city" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label class="form-label"> Location </label>
+                <input type="text" [(ngModel)]="location" formControlName="location" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Rating </label>
+                <input type="number" [(ngModel)]="rating" formControlName="rating" class="form-control">
+            </div>
+
+            <div class="d-grid gap-2 d-md-flex justify-content-center">
+                <button type="button" class="btn btn-success" (click)="updatehotel()">Update</button>
+            </div>
+            <div class="d-grid mt-2 gap-2 d-md-flex justify-content-center">
+                <button type="button" class="btn btn-info" (click)="back()">Back!</button>
+            </div> 
+        </form>
+
+    </c-modal-body>
+    <c-modal-footer>
+      <button (click)="back()" cButton color="secondary">
+        Close
+      </button>
+    </c-modal-footer>
+</c-modal>

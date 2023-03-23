@@ -1,0 +1,9 @@
+<div *ngFor = "let item of rooms" class="card text-white bg-danger mb-1 ms-5 " style="max-width: 60rem;">
+    <div class="card-header">Hotel Name:{{item.hotel.hotel_name}}</div>
+    <div class="card-body">
+      <h5 class="card-title">location:{{item.hotel.city}}</h5>
+      <p class="card-text">Rating:{{item.hotel.rating}}</p>
+      <p class="card-text">Max guest:{{item.max_guests}}</p>
+      <p class="card-text">Price:₹{{item.price}}</p>
+      <button cButton color="light" (click)="bookhotel(item._id)">Book Hotel</button> 
+    </div>

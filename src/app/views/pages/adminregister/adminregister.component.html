@@ -1,0 +1,60 @@
+<div class="bg-light min-vh-100 d-flex flex-row align-items-center">
+    <c-container>
+      <c-row class="justify-content-center">
+        <c-col lg="7" md="9" xl="6">
+          <c-card class="mx-4">
+            <c-card-body class="p-4">
+              <form [formGroup]="regform">
+                <h1>Admin Register</h1>
+                <!-- <div [ngClass] ="getClassName()" role="alert">
+                  {{message}}
+                </div> -->
+                <p class="text-medium-emphasis">Create your account</p>
+  
+                <c-input-group class="mb-3">
+                  <span cInputGroupText>
+                    <svg cIcon name="cilUser"></svg>
+                  </span>
+                  <input autoComplete="name" cFormControl formControlName="username" placeholder="Username" />
+                  <span *ngIf="isValid('username')">Please enter your name</span>
+                </c-input-group>
+                 <c-input-group class="mb-3">
+                  <span cInputGroupText>
+                    <svg cIcon name="cilUser"></svg>
+                  </span>
+                  <input autoComplete="mobilenumber"  cFormControl formControlName="mobile_number" placeholder="mobilenumber" />
+                  <span *ngIf="isValid('mobile_number')">Please enter your number</span>
+                </c-input-group>
+  
+  
+  
+  
+                <c-input-group class="mb-3">
+                  <span cInputGroupText>@</span>
+                  <input autoComplete="email"  cFormControl formControlName="email" placeholder="Email" />
+          
+                  <span *ngIf="isValid('email')">Entered email is invalid</span>
+                </c-input-group>
+  
+                <c-input-group class="mb-4">
+                  <span cInputGroupText>
+                    <svg cIcon name="cilLockLocked"></svg>
+                  </span>
+                  <input autoComplete="password"   cFormControl formControlName="password" placeholder="password" type="password" />
+                  <span *ngIf="isValid('password')">Please enter your password</span>
+                </c-input-group>
+                <div class="d-grid">
+                  <button cButton color="success" (click)="adminsignup()">Create Account</button>
+                </div>
+                <div style="text-align:center;">
+                {{successMessage}}</div>
+                <div class="d-grid mt-3">
+                <button [active]="true" cButton color="info" routerLink="/adminlogin">login Now!</button>
+                </div>
+              </form>
+            </c-card-body>
+          </c-card>
+        </c-col>
+      </c-row>
+    </c-container>
+  </div>

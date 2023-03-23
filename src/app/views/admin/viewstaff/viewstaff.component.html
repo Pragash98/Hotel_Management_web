@@ -1,0 +1,31 @@
+<c-container>
+  <c-row class="justify-content-center">
+    <c-card class="mx-19">
+      <c-card-body class="p-9">
+        <h3><b>Staff Details</b></h3>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">User Name</th>
+              <th scope="col">Mobile Number</th>
+              <th scope="col">Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let detail of staff">
+              <td>
+                {{detail.staff_name}}
+              </td>
+              <td>
+                {{detail.mobile_number}}
+              </td>
+              <td>
+                <button [active]="true" cButton color="danger">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </c-card-body>
+    </c-card>
+  </c-row>
+</c-container>
